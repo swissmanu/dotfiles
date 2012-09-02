@@ -1,1 +1,18 @@
-/Users/manuel/.gitconfig
+[user]
+	name = Manuel Alabor
+	email = msites@msites.net
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[core]
+	editor = mate -w
+	excludefiles = ~/.gitignore
+[merge]
+	tool = opendiff
+[mergetool]
+	keepBackup = true
+[alias]
+	rv = checkout -- 
+	revert = rv
