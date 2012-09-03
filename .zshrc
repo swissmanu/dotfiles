@@ -38,4 +38,4 @@ source $ZSH/oh-my-zsh.sh
 #export LSCOLORS='ExFxCxDxbxegedabagacad'
 
 # Customize to your needs...
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
