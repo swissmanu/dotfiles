@@ -1,0 +1,35 @@
+#
+# Slate configuration
+# https://github.com/jigish/slate
+#
+
+# Settings:
+config defaultToCurrentScreen true
+
+# Calculations:
+alias fiftyPercentX		(screenSizeX/2)
+alias fiftyPercentY		(screenSizeY/2)
+alias hundredPercentX	screenSizeX
+alias hundredPercentY	screenSizeY
+
+# Monitors:
+alias mon-macbook	1440x900
+alias mon-dell		1920x1080
+
+# Layouts:
+default 1monitor	resolutions:${mon-macbook}
+default 2monitor	resolutions:${mon-macbook};${mon-dell}
+
+# Positions
+alias full		move	0;0					${hundredPercentX};${hundredPercentY}
+alias left		move 	0;0					${fiftyPercentX};${hundredPercentY}
+alias right		move 	${fiftyPercentX};0	${fiftyPercentX};${hundredPercentY}
+alias top		move 	0;0					${hundredPercentX};${fiftyPercentY}	
+alias bottom	move 	0;${fiftyPercentY}	${hundredPercentX};${fiftyPercentY}
+
+# Bind to Keys:
+bind m:alt;cmd		${full}
+bind left:alt;cmd 	${left}
+bind right:alt;cmd 	${right}
+bind up:alt;cmd 	${top}
+bind down:alt;cmd 	${bottom}
