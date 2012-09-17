@@ -7,12 +7,8 @@
 config defaultToCurrentScreen true
 
 # Monitors:
-alias mon-macbook	1440x900
-alias mon-dell		1920x1080
-
-# Layouts:
-default 1monitor	resolutions:${mon-macbook}
-default 2monitor	resolutions:${mon-macbook};${mon-dell}
+alias mon-mbp	1440x900
+alias mon-ext	1920x1080
 
 # Aliases for shorter move commands:
 alias	x	screenOriginX
@@ -20,14 +16,35 @@ alias	y	screenOriginY
 alias	w	screenSizeX
 alias	h	screenSizeY
 
+# Positions for current screen:
+alias	full			move	${x};${y}			${w};${h}
+alias	left			move	${x};${y}			${w}/2;${h}
+alias	right			move	${x}+${w}/2;${y}	${w}/2;${h}
+alias	top				move	${x};${y}			${w};${h}/2
+alias	bottom			move	${x};${y}+${h}/2	${w};${h}/2
+
+# Positions for MacBook:
+alias	mbp-full		move	${x};${y}			${w};${h}		${mon-mbp}
+alias	mbp-left		move	${x};${y}			${w}/2;${h}		${mon-mbp}
+alias	mbp-right		move	${x}+${w}/2;${y}	${w}/2;${h}		${mon-mbp}
+alias	mbp-top			move	${x};${y}			${w};${h}/2		${mon-mbp}
+alias	mbp-bottom		move	${x};${y}+${h}/2	${w};${h}/2		${mon-mbp}
+
+# Positions for external screen:
+alias	ext-full		move	${x};${y}			${w};${h}		${mon-ext}
+alias	ext-left		move	${x};${y}			${w}/2;${h}		${mon-ext}
+alias	ext-right		move	${x}+${w}/2;${y}	${w}/2;${h}		${mon-ext}
+alias	ext-top			move	${x};${y}			${w};${h}/2		${mon-ext}
+alias	ext-bottom		move	${x};${y}+${h}/2	${w};${h}/2		${mon-ext}
 
 
-# Positions
-alias	full	move	${x};${y}			${w};${h}
-alias	left	move	${x};${y}			${w}/2;${h}
-alias	right	move	${x}+${w}/2;${y}	${w}/2;${h}
-alias	top		move	${x};${y}			${w};${h}/2
-alias	bottom	move	${x};${y}+${h}/2	${w};${h}/2
+
+# Layouts:
+default 1monitor	resolutions:${mon-mbp}
+default 2monitor	resolutions:${mon-mbp};${mon-ext}
+
+layout 2monitor		'Mail'		${mbp-full}
+
 
 
 # Bind to Keys:
