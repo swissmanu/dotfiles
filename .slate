@@ -43,8 +43,13 @@ alias	ext-bottom		move	${x};${y}+${h}/2	${w};${h}/2		${mon-ext}
 default 1monitor	resolutions:${mon-mbp}
 default 2monitor	resolutions:${mon-mbp};${mon-ext}
 
-layout 2monitor		'Mail'		${mbp-full}
+layout 1monitor		'Mail'			${mbp-full}
+layout 1monitor		'TextMate'		${mbp-left}
+layout 2monitor		'Terminal'		${mbp-right}
 
+layout 2monitor		'Mail'			${mbp-full}
+layout 2monitor		'TextMate'		${ext-left}
+layout 2monitor		'Terminal'		${ext-right}
 
 
 # Bind to Keys:
