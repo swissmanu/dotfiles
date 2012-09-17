@@ -6,12 +6,6 @@
 # Settings:
 config defaultToCurrentScreen true
 
-# Calculations:
-alias fiftyPercentX		(screenSizeX/2)
-alias fiftyPercentY		(screenSizeY/2)
-alias hundredPercentX	screenSizeX
-alias hundredPercentY	screenSizeY
-
 # Monitors:
 alias mon-macbook	1440x900
 alias mon-dell		1920x1080
@@ -20,12 +14,21 @@ alias mon-dell		1920x1080
 default 1monitor	resolutions:${mon-macbook}
 default 2monitor	resolutions:${mon-macbook};${mon-dell}
 
+# Aliases for shorter move commands:
+alias	x	screenOriginX
+alias	y	screenOriginY
+alias	w	screenSizeX
+alias	h	screenSizeY
+
+
+
 # Positions
-alias full		move	0;0					${hundredPercentX};${hundredPercentY}
-alias left		move 	0;0					${fiftyPercentX};${hundredPercentY}
-alias right		move 	${fiftyPercentX};0	${fiftyPercentX};${hundredPercentY}
-alias top		move 	0;0					${hundredPercentX};${fiftyPercentY}	
-alias bottom	move 	0;${fiftyPercentY}	${hundredPercentX};${fiftyPercentY}
+alias	full	move	${x};${y}			${w};${h}
+alias	left	move	${x};${y}			${w}/2;${h}
+alias	right	move	${x}+${w}/2;${y}	${w}/2;${h}
+alias	top		move	${x};${y}			${w};${h}/2
+alias	bottom	move	${x};${y}+${h}/2	${w};${h}/2
+
 
 # Bind to Keys:
 bind m:alt;cmd		${full}
