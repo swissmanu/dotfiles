@@ -8,7 +8,7 @@
 	status = auto
 [core]
 	editor = mate -w
-	excludefiles = ~/.gitignore
+	excludefile = ~/.gitignore
 [merge]
 	tool = opendiff
 [mergetool]
