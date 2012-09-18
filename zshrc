@@ -39,7 +39,3 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-
-source /Users/manuel/.rvm/scripts/rvm
