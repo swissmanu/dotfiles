@@ -14,5 +14,5 @@
 [mergetool]
 	keepBackup = true
 [alias]
-	rv = checkout -- 
-	revert = rv
+	st = status
+	co = commit
