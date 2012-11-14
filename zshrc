@@ -14,6 +14,7 @@ ZSH_THEME="manu"
 alias lla="ls -la"
 alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias cursem="cd ~/HSR/Sem\ 7\ -\ 2012/"
 
 # Comment this out to disable weekly auto-update checks
 DISABLE_AUTO_UPDATE="true"
