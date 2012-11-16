@@ -4,8 +4,11 @@
 	"font_size": 12.0,
 	"highlight_line": true,
 
-	// Window Settings
+	// Window Settings:
 	"open_files_in_new_window": false,
     "create_window_at_startup": false,
-    "close_windows_when_empty": false
+    "close_windows_when_empty": false,
+
+    // Editor:
+    "rulers": [80]
 }
