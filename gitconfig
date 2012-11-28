@@ -16,3 +16,5 @@
 [alias]
 	st = status
 	co = commit
+[push]
+	default = upstream
