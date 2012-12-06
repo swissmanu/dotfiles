@@ -1,14 +1,16 @@
 {
-	// Styling:
+	"close_windows_when_empty": true,
 	"color_scheme": "Packages/Color Scheme - Default/Monokai Bright.tmTheme",
+	"create_window_at_startup": false,
 	"font_size": 12.0,
 	"highlight_line": true,
-
-	// Window Settings:
+	"ignored_packages":
+	[
+		"Vintage"
+	],
 	"open_files_in_new_window": false,
-    "create_window_at_startup": false,
-    "close_windows_when_empty": true,
-
-    // Editor:
-    "rulers": [80]
+	"rulers":
+	[
+		80
+	]
 }

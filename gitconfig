@@ -7,7 +7,7 @@
 	interactive = auto
 	status = auto
 [core]
-	editor = subl
+	editor = subl --wait --new-window
 	excludefile = ~/.gitignore_global
 [merge]
 	tool = opendiff
