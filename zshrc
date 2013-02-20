@@ -14,7 +14,6 @@ ZSH_THEME="manu"
 alias lla="ls -la"
 alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias cursem="cd ~/HSR/Sem\ 7\ -\ 2012/"
 
 # Comment this out to disable weekly auto-update checks
 DISABLE_AUTO_UPDATE="true"
@@ -40,3 +39,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/usr/local/share/npm/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+
+# My own additions:
+if [ -f ~/.zshrc_local ]; then
+	source ~/.zshrc_local
+fi
