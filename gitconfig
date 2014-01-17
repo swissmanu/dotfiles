@@ -9,6 +9,7 @@
 [core]
 	editor = subl --wait --new-window
 	excludefile = ~/.gitignore_global
+	autocrlf = input
 [merge]
 	tool = opendiff
 [mergetool]

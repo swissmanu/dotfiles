@@ -6,13 +6,14 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"Vintage"
+		"Vintage",
+		"WordCount"
 	],
 	"open_files_in_new_window": false,
 	"rulers":
 	[
 		80
 	],
-	"use_tab_stops": true,
-	"trim_trailing_white_space_on_save": true
+	"trim_trailing_white_space_on_save": true,
+	"use_tab_stops": true
 }
