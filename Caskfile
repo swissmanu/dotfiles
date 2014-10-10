@@ -9,3 +9,9 @@ cask install qlcolorcode
 cask install qlmarkdown
 cask install quicklook-json
 cask install qlstephen
+
+# Tools and Stuff
+cask install iterm2
+cask install dropbox
+cask install controlplane
+cask install alfred
