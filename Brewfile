@@ -10,7 +10,7 @@ TAPS=(
 #    homebrew/dupes
 #    homebrew/versions
 #    homebrew/science
-#    josegonzalez/php
+    caskroom/versions
 )
 
 FORMULAS=(
@@ -37,6 +37,8 @@ CASKS=(
     controlplane
     alfred
     slate
+
+    sublime-text3
 )
 
 function setup() {
