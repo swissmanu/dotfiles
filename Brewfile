@@ -16,6 +16,7 @@ TAPS=(
 FORMULAS=(
     "git --with-brewed-curl --with-brewed-openssl --with-gettext --with-pcre"
     caskroom/cask/brew-cask
+    ssh-copy-id
     zsh
 )
 
