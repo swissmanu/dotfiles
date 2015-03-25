@@ -30,34 +30,6 @@ alias	top				move	${x};${y}				${w};${h}/2
 alias	bottom			move	${x};${y}+${h}/2		${w};${h}/2
 alias	center			move	${w}*${centerMargin};${h}*${centerMargin}	${w}*(1-2*${centerMargin});${h}*(1-2*${centerMargin})
 
-# Positions for MacBook:
-alias	mbp-full		move	${x};${y}			${w};${h}		${mon-mbp}
-alias	mbp-left		move	${x};${y}			${w}/2;${h}		${mon-mbp}
-alias	mbp-right		move	${x}+${w}/2;${y}	${w}/2;${h}		${mon-mbp}
-alias	mbp-top			move	${x};${y}			${w};${h}/2		${mon-mbp}
-alias	mbp-bottom		move	${x};${y}+${h}/2	${w};${h}/2		${mon-mbp}
-
-# Positions for external screen:
-alias	ext-full		move	${x};${y}			${w};${h}		${mon-ext}
-alias	ext-left		move	${x};${y}			${w}/2;${h}		${mon-ext}
-alias	ext-right		move	${x}+${w}/2;${y}	${w}/2;${h}		${mon-ext}
-alias	ext-top			move	${x};${y}			${w};${h}/2		${mon-ext}
-alias	ext-bottom		move	${x};${y}+${h}/2	${w};${h}/2		${mon-ext}
-
-
-
-# Layouts:
-default 1monitor	resolutions:${mon-mbp}
-default 2monitor	resolutions:${mon-mbp};${mon-ext}
-
-layout 1monitor		'Mail'			${mbp-full}
-layout 1monitor		'TextMate'		${mbp-left}
-layout 2monitor		'Terminal'		${mbp-right}
-
-layout 2monitor		'Mail'			${mbp-full}
-layout 2monitor		'TextMate'		${ext-left}
-layout 2monitor		'Terminal'		${ext-right}
-
 
 # Bind to Keys:
 bind m:alt;cmd		chain	${full} | ${center}
@@ -66,3 +38,6 @@ bind right:alt;cmd 	chain	${right} | ${right-1/3} | ${right-2/3}
 bind up:alt;cmd 	${top}
 bind down:alt;cmd 	${bottom}
 bind delete:ctrl;alt;cmd hint ${hintKeys}
+
+bind left:ctrl;alt;cmd throw next
+bind right:ctrl;alt;cmd throw prev
