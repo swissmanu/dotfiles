@@ -1,6 +1,6 @@
 [user]
 	name = Manuel Alabor
-	email = manuel@alabor.me
+	email = manuel.alabor@finnova.com
 [color]
 	branch = auto
 	diff = auto
@@ -29,3 +29,5 @@
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustExitCode = true
+[credential]
+	helper = cache
