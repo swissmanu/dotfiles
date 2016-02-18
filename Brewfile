@@ -22,14 +22,15 @@ FORMULAS=(
 
 CASKS=(
     dropbox
+    google-drive
     firefox
     google-chrome
     iterm2
     skitch
     skype
-    vagrant
     virtualbox
-    
+    vagrant
+
     qlcolorcode
     qlmarkdown
     quicklook-json
@@ -38,7 +39,10 @@ CASKS=(
     controlplane
     alfred
     slate
+    caffeine
+    flux
 
+    atom
     sublime-text3
 )
 
