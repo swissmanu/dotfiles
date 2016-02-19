@@ -18,6 +18,7 @@ FORMULAS=(
     caskroom/cask/brew-cask
     ssh-copy-id
     zsh
+    diff-so-fancy
 )
 
 CASKS=(

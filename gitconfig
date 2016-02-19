@@ -1,6 +1,6 @@
 [user]
 	name = Manuel Alabor
-	email = manuel.alabor@finnova.com
+	email = manuel@alabor.me
 [color]
 	branch = auto
 	diff = auto
@@ -10,24 +10,17 @@
 	editor = subl --wait --new-window
 	excludefile = ~/.gitignore_global
 	autocrlf = input
-[merge]
-	tool = Kaleidoscope
-[mergetool]
-	keepBackup = true
-	prompt = false
 [alias]
 	st = status
-	co = commit
 [push]
 	default = upstream
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[diff]
-	tool = Kaleidoscope
-[difftool]
-	prompt = false
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustExitCode = true
 [credential]
 	helper = osxkeychain
+[pager]
+	diff = diff-so-fancy | LESSCHARSET=utf-8 less
+	show = diff-so-fancy | LESSCHARSET=utf-8 less
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22

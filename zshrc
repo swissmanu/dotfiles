@@ -44,3 +44,4 @@ export PATH=/usr/local/bin:/usr/bin:/usr/local/share/npm/bin:/bin:/usr/sbin:/sbi
 if [ -f ~/.zshrc_local ]; then
 	source ~/.zshrc_local
 fi
+
