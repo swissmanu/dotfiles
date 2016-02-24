@@ -26,7 +26,7 @@ CASKS=(
     google-drive
     firefox
     google-chrome
-    iterm2
+#    iterm2
     skitch
     skype
     virtualbox
@@ -42,6 +42,7 @@ CASKS=(
     slate
     caffeine
     flux
+    appcleaner
 
     atom
     sublime-text3
