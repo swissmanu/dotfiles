@@ -43,6 +43,7 @@ CASKS=(
     caffeine
     flux
     appcleaner
+    spotify
 
     atom
     sublime-text3
