@@ -3,7 +3,7 @@
 1. Link dotfiles: `./link.sh`
 2. Install basic tools: `./Brewfile`
 3. Add `DEFAULT_USER` envvar to `~/.zshrc_local`: `export DEFAULT_USER='manuel'`
-4. Use Configure iTerm2 to use [Droid Sans Mono Powerline Font](https://github.com/powerline/fonts/tree/master/DroidSansMono) with sizes 14/14
+4. Use Configure iTerm2 to use [Roboto Mono Powerline Font](https://github.com/powerline/fonts/tree/master/RobotoMono)
 
 ## Credits
 * Brewfile: https://github.com/tacahilo/.dotfiles
