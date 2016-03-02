@@ -40,7 +40,15 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/usr/local/share/npm/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 
-# My own additions:
+# fuck terminal command (Ensure thefuck homebrew cask is installed)
+eval "$(thefuck --alias)"
+
+# Enable NVM (node version manager)
+export NVM_DIR="/Users/mal/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+
+# Environment specific additions:
 if [ -f ~/.zshrc_local ]; then
 	source ~/.zshrc_local
 fi
