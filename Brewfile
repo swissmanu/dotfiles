@@ -19,6 +19,7 @@ FORMULAS=(
     ssh-copy-id
     zsh
     diff-so-fancy
+    thefuck
 )
 
 CASKS=(
