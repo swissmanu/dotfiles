@@ -12,6 +12,10 @@
 	autocrlf = input
 [alias]
 	st = status
+	co = checkout
+	fixup = commit --fixup
+  squash = !sh -c 'git commit -m \"squash! $(git log -1 --format='\\''%s'\\'' $@)\"' -
+  ri = rebase --interactive --autosquash
 [push]
 	default = upstream
 [credential]
