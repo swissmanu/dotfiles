@@ -20,6 +20,7 @@ FORMULAS=(
     zsh
     diff-so-fancy
     thefuck
+    git-extras
 )
 
 CASKS=(
