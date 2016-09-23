@@ -2,7 +2,7 @@
 
 # Install dotfiles
 # Shamelessly copied from github.com/pstadler/
-for symlink in gitconfig gitignore_global slate zshrc
+for symlink in gitconfig gitignore_global slate zshrc vimrc
 do
 	rm ~/.$symlink
 	ln -s $PWD/$symlink ~/.$symlink

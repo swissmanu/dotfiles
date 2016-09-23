@@ -7,7 +7,6 @@
 	interactive = auto
 	status = auto
 [core]
-	editor = subl --wait --new-window
 	excludefile = ~/.gitignore_global
 	autocrlf = input
 [alias]
@@ -30,3 +29,7 @@
 	newHighlight = green bold 22
 [pull]
 	rebase = true
+
+
+[http "https://source.scaling.ch:8443/"]
+	sslCert = Manuel Alabor
