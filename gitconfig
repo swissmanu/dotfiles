@@ -9,6 +9,7 @@
 [core]
 	excludefile = ~/.gitignore_global
 	autocrlf = input
+	editor = /usr/bin/vim
 [alias]
 	st = status
 	co = checkout
