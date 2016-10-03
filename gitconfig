@@ -1,6 +1,7 @@
 [user]
 	name = Manuel Alabor
 	email = manuel@alabor.me
+	signingkey = 04E4AEA3
 [color]
 	branch = auto
 	diff = auto
@@ -34,3 +35,5 @@
 
 [http "https://source.scaling.ch:8443/"]
 	sslCert = Manuel Alabor
+[commit]
+	gpgsign = true
