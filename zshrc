@@ -30,7 +30,7 @@ DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-extras compleat textmate thor)
+plugins=(git git-extras compleat yarn)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -52,3 +52,4 @@ export NVM_DIR="/Users/mal/.nvm"
 if [ -f ~/.zshrc_local ]; then
 	source ~/.zshrc_local
 fi
+
