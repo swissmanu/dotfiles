@@ -17,6 +17,7 @@
 	fixup = commit --fixup
 	squash = !sh -c 'git commit -m \"squash! $(git log -1 --format='\\''%s'\\'' $@)\"' -
 	ri = rebase --interactive --autosquash
+	all = "!f() { ls -R -d */.git | sed s,/.git,, | xargs -P10 -I{} git -C {} $1; }; f"
 [push]
 	default = upstream
 [credential]
@@ -31,9 +32,5 @@
 	newHighlight = green bold 22
 [pull]
 	rebase = true
-
-
-[http "https://source.scaling.ch:8443/"]
-	sslCert = Manuel Alabor
 [commit]
 	gpgsign = true

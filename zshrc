@@ -43,13 +43,10 @@ export PATH=/usr/local/bin:/usr/bin:/usr/local/share/npm/bin:/bin:/usr/sbin:/sbi
 # fuck terminal command (Ensure thefuck homebrew cask is installed)
 eval "$(thefuck --alias)"
 
-# Enable NVM (node version manager)
-export NVM_DIR="/Users/mal/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
+# Source fzf Commands
+source ~/.fzfcommands
 
 # Environment specific additions:
 if [ -f ~/.zshrc_local ]; then
 	source ~/.zshrc_local
 fi
-
