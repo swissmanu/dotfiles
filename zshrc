@@ -40,6 +40,8 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/usr/local/share/npm/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 
+export LANG=en_US.UTF8
+
 # fuck terminal command (Ensure thefuck homebrew cask is installed)
 eval "$(thefuck --alias)"
 
