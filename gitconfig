@@ -8,7 +8,7 @@
 	interactive = auto
 	status = auto
 [core]
-	excludefile = ~/.gitignore_global
+	excludesFile = ~/.gitignore_global
 	autocrlf = input
 	editor = /usr/bin/vim
 [alias]
@@ -34,3 +34,8 @@
 	rebase = true
 [commit]
 	gpgsign = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
