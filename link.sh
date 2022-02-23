@@ -8,8 +8,5 @@ do
 	ln -s $PWD/$symlink ~/.$symlink
 done
 
-# Install ZSH Theme
-ln -s $PWD/ZSH\ Themes/manu.zsh-theme ~/.oh-my-zsh/themes/manu.zsh-theme
-
-# Link Sublime
-# ln -s "$PWD/Sublime Text 2/Preferences.sublime-settings" "~/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings"
+mkdir ~/.config
+ln -s $PWD/.config/starship.toml ~/.config/starship.toml
