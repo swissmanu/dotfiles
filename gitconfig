@@ -14,9 +14,13 @@
 [alias]
 	st = status
 	co = checkout
+	get-branch = !git rev-parse --abbrev-ref HEAD
+	publish = !git push -u origin $(git get-branch)
 	fixup = commit --fixup
-	squash = !sh -c 'git commit -m \"squash! $(git log -1 --format='\\''%s'\\'' $@)\"' -
+	r = rebase
 	ri = rebase --interactive --autosquash
+	wip = commit -a -m "WIP" --no-verify
+	unwip = !git reset --soft HEAD^1 && git restore --staged .
 	all = "!f() { ls -R -d */.git | sed s,/.git,, | xargs -P10 -I{} git -C {} $1; }; f"
 [push]
 	default = upstream
