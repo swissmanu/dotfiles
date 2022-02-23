@@ -10,8 +10,7 @@ spoon.MiroWindowsManager:bindHotkeys({
     fullscreen = {hyper, "m"}
 })
 
-spoon.WindowScreenLeftAndRight:bindHotkeys(
-    {
-        screen_left = {hyper, "j"},
-        screen_right = {hyper, "k"}
-    })
+spoon.WindowScreenLeftAndRight:bindHotkeys({
+    screen_left = {hyper, "j"},
+    screen_right = {hyper, "k"}
+})
