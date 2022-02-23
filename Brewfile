@@ -10,45 +10,45 @@ TAPS=(
 #    homebrew/dupes
 #    homebrew/versions
 #    homebrew/science
-    caskroom/versions
+    # caskroom/versions
 )
 
 FORMULAS=(
     "git --with-brewed-curl --with-brewed-openssl --with-gettext --with-pcre"
-    caskroom/cask/brew-cask
+    #caskroom/cask/brew-cask
     ssh-copy-id
-    zsh
+    #zsh
     diff-so-fancy
-    thefuck
+    # thefuck
     git-extras
 )
 
 CASKS=(
-    dropbox
-    google-drive
-    firefox
-    google-chrome
+    # dropbox
+    # google-drive
+    # firefox
+    # google-chrome
 #    iterm2
-    skitch
-    skype
-    virtualbox
-    vagrant
+    # skitch
+    # skype
+    # virtualbox
+    # vagrant
 
     qlcolorcode
     qlmarkdown
     quicklook-json
     qlstephen
 
-    controlplane
-    alfred
-    slate
-    caffeine
-    flux
-    appcleaner
-    spotify
+    # controlplane
+    # alfred
+    # slate
+    # caffeine
+    # flux
+    # appcleaner
+    # spotify
 
-    atom
-    sublime-text3
+    # atom
+    # sublime-text3
 )
 
 function setup() {
