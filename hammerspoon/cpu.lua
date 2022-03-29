@@ -15,7 +15,7 @@ function update(data)
 
     if cpuUsageCanvas == nil then
         -- init canvas only once
-        cpuUsageCanvas = canvas.new{
+        cpuUsageCanvas = canvas.new {
             x = 0,
             y = 0,
             h = imageHeight,
@@ -42,14 +42,13 @@ function update(data)
 
     if #cpuUsageCanvas == numberOfCores then
         -- add border only once:
-        cpuUsageCanvas[numberOfCores + 1] =
-            {
-                action = "stroke",
-                type = "rectangle",
-                strokeColor = {alpha = .2},
-                frame = {x = 0, y = 0, w = imageWidth, h = imageHeight},
-                roundedRectRadii = {xRadius = 3, yRadius = 3}
-            }
+        cpuUsageCanvas[numberOfCores + 1] = {
+            action = "stroke",
+            type = "rectangle",
+            strokeColor = {alpha = .2},
+            frame = {x = 0, y = 0, w = imageWidth, h = imageHeight},
+            roundedRectRadii = {xRadius = 3, yRadius = 3}
+        }
     end
 
     cpuUsageMenubar:setIcon(cpuUsageCanvas:imageFromCanvas())

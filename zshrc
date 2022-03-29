@@ -16,18 +16,14 @@ plugins=(git git-extras compleat yarn)
 source $ZSH/oh-my-zsh.sh
 
 
-
-## Starhsip
-# Load Starhsip
-eval "$(starship init zsh)"
-
 ##
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+export PATH=/usr/local/bin:/usr/bin:/opt/homebrew/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$PATH
 export LANG=en_US.UTF8
 
-# fuck terminal command (Ensure thefuck homebrew cask is installed)
-eval "$(thefuck --alias)"
+## Starship
+# Load Starship
+eval "$(starship init zsh)"
 
 # Source fzf Commands
 source ~/.fzfcommands
@@ -36,5 +32,4 @@ source ~/.fzfcommands
 if [ -f ~/.zshrc_local ]; then
 	source ~/.zshrc_local
 fi
-
 
