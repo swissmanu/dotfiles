@@ -24,6 +24,3 @@ format = """\
     $character\
 """
 
-[kubernetes]
-disabled = false
-
