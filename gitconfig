@@ -1,7 +1,7 @@
 [user]
 	name = Manuel Alabor
 	email = manuel@alabor.me
-	signingkey = 04E4AEA3
+	signingkey = C2629654CB8624DB 
 [color]
 	branch = auto
 	diff = auto
@@ -11,6 +11,8 @@
 	excludesFile = ~/.gitignore_global
 	autocrlf = input
 	editor = /usr/bin/vim
+[init]
+	defaultBranch = main
 [alias]
 	st = status
 	co = checkout
@@ -19,7 +21,7 @@
 	fixup = commit --fixup
 	r = rebase
 	ri = rebase --interactive --autosquash
-	wip = commit -a -m "WIP" --no-verify
+	wip = -c commit.gpgsign=false commit -a -m "WIP" --no-verify
 	unwip = !git reset --soft HEAD^1 && git restore --staged .
 	all = "!f() { ls -R -d */.git | sed s,/.git,, | xargs -P10 -I{} git -C {} $1; }; f"
 [push]
