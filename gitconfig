@@ -16,6 +16,7 @@
 [alias]
 	st = status
 	co = checkout
+	c = commit
 	get-branch = !git rev-parse --abbrev-ref HEAD
 	publish = !git push -u origin $(git get-branch)
 	fixup = commit --fixup
