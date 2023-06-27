@@ -19,7 +19,6 @@ format = """\
     $custom\
     $line_break\
     $jobs\
-    $battery\
     $time\
     $character\
 """
