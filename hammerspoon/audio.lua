@@ -52,9 +52,17 @@ onAirIconCanvas[1] = {
 onAirIconCanvas[2] = {
     action = "fill",
     type = "text",
-    text = "ON AIR",
-    textSize = 12,
-    textAlignment = "center",
+    text = hs.styledtext.new(
+        "ON AIR", {
+            font = {
+                name = "Helvetica Neue Bold",
+                size = 12
+            },
+            paragraphStyle = {
+                alignment = "center"
+            }
+        }
+    ),
     frame = {
         x = 0,
         y = 2,
