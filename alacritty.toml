@@ -1,0 +1,70 @@
+[colors.bright]
+black = "0x858484"
+blue = "0x7a95d2"
+cyan = "0x927dd4"
+green = "0x93be69"
+magenta = "0xdc7ebb"
+red = "0xe89279"
+white = "0xfefefe"
+yellow = "0xf3d687"
+
+[colors.cursor]
+cursor = "0xd9ba2e"
+text = "0x000000"
+
+[colors.normal]
+black = "0x010000"
+blue = "0x7f93d0"
+cyan = "0x9679d7"
+green = "0x94c16b"
+magenta = "0xda7cba"
+red = "0xeb957a"
+white = "0xbab9ba"
+yellow = "0xf3d687"
+
+[colors.primary]
+background = "0x010000"
+foreground = "0xbab9ba"
+
+[colors.selection]
+background = "0x4b2e4a"
+text = "0xb4b4b3"
+
+[font]
+size = 14.0
+
+[font.normal]
+family = "FiraCode Nerd Font"
+style = "Retina"
+
+[schemes.optometrist.bright]
+black = "0x858484"
+blue = "0x7a95d2"
+cyan = "0x927dd4"
+green = "0x93be69"
+magenta = "0xdc7ebb"
+red = "0xe89279"
+white = "0xfefefe"
+yellow = "0xf3d687"
+
+[schemes.optometrist.cursor]
+cursor = "0xd9ba2e"
+text = "0x000000"
+
+[schemes.optometrist.normal]
+black = "0x010000"
+blue = "0x7f93d0"
+cyan = "0x9679d7"
+green = "0x94c16b"
+magenta = "0xda7cba"
+red = "0xeb957a"
+white = "0xbab9ba"
+yellow = "0xf3d687"
+
+[schemes.optometrist.primary]
+background = "0x010000"
+foreground = "0xbab9ba"
+
+[schemes.optometrist.selection]
+background = "0x4b2e4a"
+text = "0xb4b4b3"

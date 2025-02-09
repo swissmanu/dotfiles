@@ -1,36 +1,37 @@
 ------------------------
 -- Toggle mute of current input device:
-hs.hotkey.bind(
-    hyper, "p", function()
-        local currentDevice = hs.audiodevice.current(true)
-        if currentDevice == nil then return end
-        local deviceName = currentDevice.name
-        local device = hs.audiodevice.findInputByName(deviceName)
-        if device ~= nil then
-            local muted = device:inputMuted()
-            if muted ~= nil then
-                local nextMuted = not muted
-                device:setInputMuted(nextMuted)
-                if nextMuted then
-                    print(deviceName .. " muted")
-                else
-                    print(deviceName .. " unmuted")
-                end
+hs.hotkey.bind(hyper, "p", function()
+    local currentDevice = hs.audiodevice.current(true)
+    if currentDevice == nil then return end
+    local deviceName = currentDevice.name
+    local device = hs.audiodevice.findInputByName(deviceName)
+    if device ~= nil then
+        local muted = device:inputMuted()
+        if muted ~= nil then
+            local nextMuted = not muted
+            device:setInputMuted(nextMuted)
+            if nextMuted then
+                print(deviceName .. " muted")
             else
-                hs.notify.show("Mic Toggle", "", "Could not determine inputMuted for \"" .. deviceName .. "\"")
+                print(deviceName .. " unmuted")
             end
         else
-            hs.notify.show("Mic Toggle", "", "Could not find microphone named \"" .. deviceName .. "\"")
+            hs.notify.show("Mic Toggle", "",
+                           "Could not determine inputMuted for \"" .. deviceName ..
+                               "\"")
         end
+    else
+        hs.notify.show("Mic Toggle", "", "Could not find microphone named \"" ..
+                           deviceName .. "\"")
     end
-)
+end)
 
 -----------------------------------------
 -- Show "ON AIR" icon in menubar if current input device is unmuted:
 
 local currentOnChangeMuteWatcher
 local micStateMenubar = hs.menubar.new()
-local onAirIconDimensions = { w = 64, h = 20 }
+local onAirIconDimensions = {w = 64, h = 20}
 local onAirIconCanvas = hs.canvas.new {
     x = 0,
     y = 0,
@@ -47,30 +48,20 @@ onAirIconCanvas[1] = {
         w = onAirIconDimensions.w - 2,
         h = onAirIconDimensions.h - 2
     },
-    roundedRectRadii = { xRadius = 6, yRadius = 6 }
+    roundedRectRadii = {xRadius = 6, yRadius = 6}
 }
 onAirIconCanvas[2] = {
     action = "fill",
     type = "text",
-    text = hs.styledtext.new(
-        "ON AIR", {
-            font = {
-                name = "Helvetica Neue Bold",
-                size = 12
-            },
-            paragraphStyle = {
-                alignment = "center"
-            }
-        }
-    ),
-    frame = {
-        x = 0,
-        y = 2,
-        w = onAirIconDimensions.w,
-        h = onAirIconDimensions.h
-    }
+    text = hs.styledtext.new("ON AIR", {
+        font = {name = "Helvetica Neue Bold", size = 12},
+        paragraphStyle = {alignment = "center"}
+    }),
+    frame = {x = 0, y = 2, w = onAirIconDimensions.w, h = onAirIconDimensions.h}
 }
 local onAirIcon = onAirIconCanvas:imageFromCanvas()
+micStateMenubar:setClickCallback(
+    function() setupWatcherForCurrentInputDevice() end)
 
 function onWatcherCallback(uid, event)
     local device = hs.audiodevice.findInputByUID(uid)
@@ -89,7 +80,8 @@ function handleInputGoneEvent(uid)
     if currentInput ~= nil then
         if currentInput.uid ~= uid then
             if currentOnChangeMuteWatcher ~= nil then
-                local watcher = hs.audiodevice.findInputByUID(currentOnChangeMuteWatcher)
+                local watcher = hs.audiodevice.findInputByUID(
+                                    currentOnChangeMuteWatcher)
                 if watcher == nil then return end
                 watcher:watcherStop()
                 setupWatcherForCurrentInputDevice(currentInput.uid)

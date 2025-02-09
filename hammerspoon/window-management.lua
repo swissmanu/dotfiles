@@ -1,7 +1,7 @@
 hs.loadSpoon("MiroWindowsManager")
 hs.loadSpoon("WindowScreenLeftAndRight")
 
-hs.window.animationDuration = 0.01
+hs.window.animationDuration = 0
 spoon.MiroWindowsManager:bindHotkeys({
     up = {hyper, "up"},
     right = {hyper, "right"},
