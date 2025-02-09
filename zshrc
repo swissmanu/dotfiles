@@ -15,6 +15,9 @@ plugins=(git git-extras compleat yarn kubectl)
 
 source $ZSH/oh-my-zsh.sh
 
+## Include dotfile Scritps in PATH
+export PATH="$HOME/git/dotfiles/bin:$PATH"
+
 
 ##
 # Customize to your needs...
